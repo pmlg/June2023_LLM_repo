@@ -86,4 +86,6 @@ IMHO we're far away from any kind of AGI. Current hype around extinction securit
 
 Current generation of LLMs is amazing when it comes to summarising large amounts of unstructed text; VERY HARD to get to 100% correct. Can have catastrophic consequences (meme of write code in 5 minutes, spent days debugging GPT output?)
 
+Going forward, what's likely: we have tree of thought, where different nodes are evaluated by one model. We'll next have tree of models, where each node is its own model specialised on a task (potentially happening with racism detection in GPT4?), while each node's is evaluated by other models.
+
 Final screenshot: IBM 1975, A machine should never make a business decision because a machine cannot be held accountable.
