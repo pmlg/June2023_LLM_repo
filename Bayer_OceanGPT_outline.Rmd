@@ -70,9 +70,7 @@ Lots of work on LLMs evaluating the output of LLMs - towards more correct output
 # A ramble
 
 Lots of hype/fearmongering about AGI. I have not seen any AGI in my work. Show the picture of the face on Mars; remind people that we're all primed to find 
-human-like behaviour in rocks. Talk a bit about stochastic parrots (Bender paper). ChatGPT cannot generalise/find novel ideas. I've played around a lot with trying to get 
-OceanGPT to find novel patterns in our data, usually terrible at this. Only good if I get an ecologist or a fisheries scientist to ask their questions; ChatGPT has
-so far failed to come up with its own questions when prompted to. Human needed to understand and generalise. I don't see any progress in LLMs towards that end.
+human-like behaviour in rocks. Talk a bit about stochastic parrots (Bender paper). ChatGPT *probably* (IMHO) cannot generalise/find novel ideas. I've played around a lot with trying to get OceanGPT to find novel patterns in our data, usually terrible at this. Only good if I get an ecologist or a fisheries scientist to ask their questions; ChatGPT has so far failed to come up with its own questions when prompted to. Human needed to understand and generalise. I don't see any progress in LLMs towards that end.
 
 Will we all be unemployed? Programming is the task of writing instructions to a high level of specificity. Repeat joke on 'buy cabbage. if they have eggs, buy ten.' 
 and getting ten cabbages. In my experience, ChatGPT will quickly veer off course, choose the wrong Tool, etc. pp. Need to be as specific as possible, and even then, 
