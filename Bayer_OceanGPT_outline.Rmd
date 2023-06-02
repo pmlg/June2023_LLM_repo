@@ -1,0 +1,75 @@
+Just some ideas for an outline here - let me know how that aligns with your ideas and I'll adjust or cut
+
+# Outline
+
+# Where are we now?
+
+A really short timeline leading to GPT-4 and other LLMs. 
+
+# Technical problems, so far
+
+Hallucinations - fake answers. Huge difference between GPT3 and GPT4, at the cost of (IMHO) a more 'conservative' GPT4 that returns shorter or no answers.
+
+Kinda wrong answers - hard to spot when GPT returns a 95% correct answer
+
+# Societal problems
+
+In my early 'hacker' days, if you would've built a company and asked people to pay you by the token they'd have pelted you with tomatoes. Now every GPT-based 
+project asks you to enter various API keys first, and you pay for a bunch of tools. We're locking ourselves into walled gardens voluntarily. 
+(Link to 'there is no moat' memo - I feel like GPT4 is worlds better than open source solutions. feels like LibreOffice vs Word, clunky thing that kinda works with
+a polished locked-in thing)
+
+
+
+# Some successes
+
+My favorite success: https://news.ycombinator.com/item?id=35073603
+Using ChatGPT to summarise/extract information from large amounts of unstructed text.
+All text of a long-running podcast; ChatGPT was asked to structure that text, generate summaries for each episode, pull out guest names, mentioned books, 
+and classify in Dewey decimal system. Website built around the ChatGPT output. Needs to be run only once! Hallucinates occasionally (non-existing Dewey numbers etc.)
+
+I'm not interested in chatbots. I had those on ICQ in the 90s. So far we have better Chinese Rooms, or Thai libraries (link to both thought experiments)
+
+# My problems
+
+At Minderoo we've been working with GPTs to get our complex fish data (eDNA) into a format that regular people 
+(the public, marine park managers, teachers, journalists, etc. pp.) can use. eDNA data: we go out on a boat, sequence DNA from water-samples,
+then build maps of where we find what fish. Huge amounts of data, may be too complex for people without coding skills.
+
+Have experimented for a few weeks with various GPT/langchain-based implementations.
+
+OceanGPT version 1 - a huge prompt with fake English texts. Show code in screenshot. Gave wrong answers as the fake text was too long for the token limit. 
+Would hallucinate information about various fish. (sidenote: Pre-GPT4, GPT4 doesn't hallucinate as much any more)
+Show screenshots of hallucination.
+Show screenshots of wrong calculation (what's the most common fish? counts up to 6 or so, should be hundreds)
+
+OceanGPT version 2 - langchain-based agents. One agent who has specific Tools. Fewer hallucinations (apart from the occasionally hallucinated Tool).
+One Tool for PDF summaries and pulling out relevant PDF pages
+One Tool to run Python-Pandas code on our data (DANGER DANGER DANGER) to summarise what we've found
+One Tool to google stuff (API :( costs money :( )
+One Tool to connect and summarise these outputs
+Uses chain of thought to connect these.
+
+Drawbacks: especially PDF summary gets expensive fast, with 50 cents to a dollar per query. We expect dozens/hundreds of queries per day. 
+Papers-qa: GREAT summaries, very expensive. Shorter langchain-based KNN summaries: serviceable, cheaper, but limited.
+(Cool thing about langchain: VERY easy to replace the OpenAI integration with your self-hosted model. I have tried 7B-LLama so far and it was far worse)
+
+Summary tool often throws away information, turned that off for now. (can you find some patterns in the data?  
+intermediate Tools find some patterns of correlation; final Summary tool says 'Yes you can find some patterns.' and ends there.
+
+Lots of security and reputation issues; this thing runs code, and you should never let user-generated code run on your machine (its inside Docker, but still). 
+Can break out of prompts and have the bot return reputationally damaging text - unhappy employers.
+what if a park manager decides something based on a wrong answer? who's to blame? the manager? me? 
+
+# A ramble
+
+Lots of hype/fearmongering about AGI. I have not seen any AGI in my work. Show the picture of the face on Mars; remind people that we're all primed to find 
+human-like behaviour in rocks. Talk a bit about stochastic parrots (Bender paper). ChatGPT cannot generalise/find novel ideas. I've played around a lot with trying to get 
+OceanGPT to find novel patterns in our data, usually terrible at this. Only good if I get an ecologist or a fisheries scientist to ask their questions; ChatGPT has
+so far failed to come up with its own questions when prompted to. Human needed to understand and generalise. I don't see any progress in LLMs towards that end.
+
+Will we all be unemployed? Programming is the task of writing instructions to a high level of specificity. Repeat joke on 'buy cabbage. if they have eggs, buy ten.' 
+and getting ten cabbages. In my experience, ChatGPT will quickly veer off course, choose the wrong Tool, etc. pp. Need to be as specific as possible, and even then, 
+returned summaries of scientific insights can be 95% correct - I need 100%. 
+
+Final screenshot: IBM 1975, A machine should never make a business decision because a machine cannot be held accountable.
