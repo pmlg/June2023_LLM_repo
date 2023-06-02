@@ -6,6 +6,10 @@ Just some ideas for an outline here - let me know how that aligns with your idea
 
 A really short timeline leading to GPT-4 and other LLMs. 
 
+explain tokenisation, explain cost per token.
+
+explain training process: not trained on truth, but on producing the most likely next piece of text given half a piece of text (and that half piece can be a question).
+
 # Technical problems, so far
 
 Hallucinations - fake answers. Huge difference between GPT3 and GPT4, at the cost of (IMHO) a more 'conservative' GPT4 that returns shorter or no answers.
