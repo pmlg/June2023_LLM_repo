@@ -10,6 +10,8 @@ explain tokenisation, explain cost per token.
 
 explain training process: not trained on truth, but on producing the most likely next piece of text given half a piece of text (and that half piece can be a question).
 
+more an art than a craft - we rarely can predict why something works. lots of 'best practises', no standards. (Yang Harnessing the power...)paper)
+
 # Technical problems, so far
 
 Hallucinations - fake answers. Huge difference between GPT3 and GPT4, at the cost of (IMHO) a more 'conservative' GPT4 that returns shorter or no answers.
