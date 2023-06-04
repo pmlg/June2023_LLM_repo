@@ -72,6 +72,7 @@ Upcoming version 3: very excited about tree of thought (show paper, screenshot).
 
 Lots of work on LLMs evaluating the output of LLMs - towards more correct output. Show new OpenAI paper. Drawback: imagine the token costs!
 
+Have 37,000 eDNA papers to summarise or interrogate. Might build a summariser that goes to openGPT *once* for a chunk of text, then just talk to the local summariser. But my act of deciding what to summarise will skew what users can ask.
 
 # A ramble
 
